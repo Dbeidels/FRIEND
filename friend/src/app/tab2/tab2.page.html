@@ -21,7 +21,7 @@
     <ion-list-header  class="bg-class2" style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Select your major:</div></ion-list-header>
     <ion-item style="color: #1c357a">
       <ion-label style="color: #1c357a;"><div class="fadeIn">Pick all your interests</div></ion-label>
-      <ion-select style="color: #1c357a;" multiple [(ngModel)] = "searchTerm" (ionChange)="setStars(); setFilteredItems(); createSort()" placeholder="Select a Major (Optional)">
+      <ion-select style="color: #1c357a;" multiple [(ngModel)] = "searchTerm" (ionChange)="setStars(); setFilteredItems(); createSort()">
         <ion-select-option value="football">Football</ion-select-option>
         <ion-select-option value="basketball">Basketball</ion-select-option>
         <ion-select-option value="soccer">Soccer</ion-select-option>
