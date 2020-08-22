@@ -1,17 +1,50 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
+<ion-header style="color: #1c357a">
+  <ion-toolbar class="bg-class">
+  <ion-row>
+  <ion-col size="auto">
+    <img src="/assets/icon/mockupMacAbroad3.png" width="58px" style="display:inline-block" height="58px" (click)="goToHome()">
+  </ion-col>
+  <ion-col size="auto">
+      <ion-title class="titleicon" style = "font-size:25px; text-align: center; display:inline-block">
+        <div class="fadeIn">
+            Pick Your Preferences
+        </div>
+      </ion-title>
+      </ion-col>
+    </ion-row>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-content padding class="bg-class">
+    <ion-list>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
-</ion-content>
+    <ion-list-header  class="bg-class2" style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Select your major:</div></ion-list-header>
+    <ion-item style="color: #1c357a">
+      <ion-label style="color: #1c357a;"><div class="fadeIn">Pick all your interests</div></ion-label>
+      <ion-select style="color: #1c357a;" multiple [(ngModel)] = "searchTerm" (ionChange)="setStars(); setFilteredItems(); createSort()" placeholder="Select a Major (Optional)">
+        <ion-select-option value="football">Football</ion-select-option>
+        <ion-select-option value="basketball">Basketball</ion-select-option>
+        <ion-select-option value="soccer">Soccer</ion-select-option>
+        <ion-select-option value="baseball">Baseball</ion-select-option>
+        <ion-select-option value="hockey">Hockey</ion-select-option>
+        <ion-select-option value="wwe">WWE</ion-select-option>
+        <ion-select-option value="comics">Comics</ion-select-option>
+        <ion-select-option value="Video Games">Video Games</ion-select-option>
+        <ion-select-option value="DND">DND</ion-select-option>
+        <ion-select-option value="movies">Movies</ion-select-option>
+        <ion-select-option value="cartoons">Cartoons</ion-select-option>
+        <ion-select-option value="anime">Anime</ion-select-option>
+        <ion-select-option value="books">Books</ion-select-option>
+        <ion-select-option value="hiking">Hiking</ion-select-option>
+      </ion-select>
+  </ion-item>
+  </ion-list>
+
+  <div class="center">
+    <ion-button (click)="goToMatches()">
+        <div class="fadeIn">
+          Search <ion-icon name = "search"></ion-icon>
+        </div>
+    </ion-button>
+
+  </div>
